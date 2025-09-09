@@ -3,15 +3,9 @@ This repository contains a custom ROS package, `my_rosbot_2r_pkg`, designed to e
 
 Using the `find_object_2d` package, the robot detects the object, processes its position relative to the robot through homography and perspective transformation, and adjusts the robot's movement accordingly. It also integrates OpenCV for visual feedback, drawing bounding boxes and centroids on the detected object. The robot’s distance to the object is monitored using either Lidar or TOF sensors, and the node continuously publishes velocity commands to keep the robot aligned and at the correct distance from the object.
 
-### Demo Video
-You can watch the demo video of object tracking by clicking on the below image
-[![Watch the video](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/4.png)](https://www.youtube.com/watch?v=KF7SK3x3tR0)
-You can watch the demo video of object detection by clicking on the below image
-[![Watch the video](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/4.png)](https://youtu.be/ihLOgAEz3rU)
 
 ## Gazebo World
-Below image shows the Gazebo world used in this project. The world contains different objects.
-![Gazebo World](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/6.png)
+The world contains different objects.
 
 ### Note 
 1.  Details about cloning the repository are given at the end of this **readme file**
@@ -29,13 +23,13 @@ roslaunch object_teaching.launch teach:=true
 A GUI will open with the Gazebo Simulation environment. Use the keyboard to control the robot (via the teleop twist keyboard node) and align it perfectly with the object you wish to detect.
 
 To begin the teaching process, select Edit → Add object from scene... from the main toolbar. A new window will appear. Move the robot with the camera to capture as many features of the object as possible. Avoid capturing the surroundings. When ready, click Take picture.
-![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/1.png)
+
 
 In the next view, click Select region and choose only the part of the picture that covers the desired object, then click Next and then click End. Check the ID of the objects from the left windown.
-![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/2.png)
+
 
 Once you’ve added enough objects to the database, stop the camera by selecting Edit → Stop camera, then choose File → Save objects... from the main toolbar. Save the data inside the package in a separate folder.
-![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/3.png)
+!
 
 ## Object Tracking Logic
 - The robot continuously rotates counterclockwise in the environment until it detects the desired object. Once found, it checks the distance to 
@@ -71,7 +65,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 ```bash
-git clone https://github.com/EhtishamAshraf/rosbot_object_tracking_ws.git
+git clone https://github.com/AsadUllahYounus/Object-Tracking-ROS.git
 ```
 ```bash
 cd rosbot_object_tracking_ws/src
